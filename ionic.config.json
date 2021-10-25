@@ -1,0 +1,7 @@
+{
+  "name": "MixN_ionic_angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
