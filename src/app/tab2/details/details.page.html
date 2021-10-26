@@ -3,17 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ result?.strDrink }}</ion-title>
+    <ion-title>{{ information?.strDrink }}</ion-title>
   </ion-toolbar>
 </ion-header>
  
 <ion-content padding>
  
-  <ion-card *ngIf="result">
-    <img [src]="result.strDrinkThumb" >
+  <ion-card *ngIf="information">
+    <img [src]="information.strDrinkThumb" >
     <ion-card-header>
     <ion-card-subtitle>Recipe</ion-card-subtitle>
-    <p>{{ result.strInstructions }}</p>
+    <p>{{ information.strInstructions }}</p>
     </ion-card-header>
     <ion-card-content>
       <ion-card-subtitle>Measurements & ingredients</ion-card-subtitle>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ category }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'details', item.idDrink]">
+      <ion-label text-wrap>
+        <h3>{{ item.strDrink }}</h3>
+      </ion-label> 
+      <ion-avatar slot="start">
+        <img [src]="item.strDrinkThumb" *ngIf="item.strDrinkThumb !== null">
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
